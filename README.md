@@ -102,5 +102,15 @@ Direct API calls can be called in your plugins in the following form:
     
     sc.api_call("API.method", "parameters")
 
+Running Under Docker
+-----------
+Docker image for slackhq/python-rtmbot https://github.com/slackhq/python-rtmbot
+
+## Usage
+
+```bash
+$ docker run -d -e SLACK_TOKEN='API_Token_of_your_bot' -v /path/to/plugins/dir/:/python-rtmbot/plugins layolu/python-rtmbot
+```
+
 ####Todo:
 Some rtm data should be handled upstream, such as channel and user creation. These should create the proper objects on-the-fly.
